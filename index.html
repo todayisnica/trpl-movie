@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRPL Movie</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom Style -->
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #343a40, #6c757d);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .search-box {
+            margin-top: -30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .btn-dark {
+            border-radius: 10px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .modal-content {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <span class="navbar-brand mb-0 h1">🎬 TRPL Movie</span>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>Find Your Favorite Movie 🎥</h1>
+    <p>Search movies from OMDb API easily</p>
+</div>
+
+<!-- Search -->
+<div class="container search-box">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="Search movie..." id="search-input">
+                <div class="input-group-append">
+                    <button class="btn btn-dark" id="button-search">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result -->
+    <div class="row" id="movie-list"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Movie Detail</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body"></div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
